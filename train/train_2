@@ -1,0 +1,8 @@
+history = model.fit(
+    trainGen,
+    steps_per_epoch=len(trainGen),
+    validation_data=valGen,
+    validation_steps=len(valGen),
+    epochs=20,
+    callbacks=[reduce_lr, model_checkpoint_callback]
+)
